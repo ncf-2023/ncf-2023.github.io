@@ -1,0 +1,8 @@
+@keyframes shapesAnim {
+  0% {
+    transform: translateY(0px) rotateY(0deg);
+  }
+  100% {
+    transform: translateY(100px) rotateY(5deg);
+  }
+}

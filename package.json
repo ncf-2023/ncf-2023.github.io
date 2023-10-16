@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.11.1",
+    "css-loader": "^6.8.1",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2"
+  },
+  "name": "campusfestival_2023_nagoya",
+  "description": "## INDEX 1. [前提](#前提) 2. [フォルダー構成](#フォルダー構成)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --mode development --watch --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

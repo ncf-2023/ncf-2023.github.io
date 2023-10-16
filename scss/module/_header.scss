@@ -1,0 +1,19 @@
+.navbar {
+  & .navbar-brand {
+    background-color: #fff8;
+    padding: 8px;
+    border-radius: 3px;
+  }
+  & > div > div > .navbar-nav > li > a {
+    & > img {
+      height: 60px;
+    }
+    & > .material-symbols-outlined {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+  background-color: #c799d4;
+  max-height: 70px;
+  z-index: 1020;
+}

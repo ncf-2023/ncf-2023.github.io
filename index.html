@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Fun More Enjoy 名古屋イチのフェスティバル ~最高の記憶の１ページ~</title>
+    <link rel="stylesheet" href="./scss/pages/index.css" />
+    <link rel="shortcut icon" href="favicon.PNG" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="wrapper">
+
+      <div class="main" id="content">
+        <div class="png">
+          <ul>
+            <li><img src="media/about_works231100574001Character.png" alt="" height="400" ></li> 
+          <li><img src="media/about_works231100705001Character.png" alt="" height="400"  ></li> 
+            <li><img src="media/about_works211101144001Character.png" alt="" height="400" ></li>
+          </ul>
+          
+        </div><!--scssでflexおねがいします-->
+        <div class="rogo"><img src="media/index_logostr.png" alt="文字だけロゴ" width="1000" style="display: block; margin: auto;" /></div>
+        <div class="themeandtimetable">
+          <h3><p>テーマ<br />〜ハロウィン〜<br />開催日時:10/28（土）</p></h3>
+        </div>
+        <div class="time schedule">
+          <h1>タイムスケジュール</h1>
+          <details class="details">
+            <!--改行と文字サイズは後からやる-->
+            <summary class="details-summary">キャンクレ珈琲</summary>
+            <p class="details-content">　11:00～<br>
+            おばけクレープとこだわりのコーヒー<br>
+            <担当者の一言><br>
+              本格的なハロウィン風クレープと自販機のコーヒーとは一味違う“珈琲“をお届けします！<br />
+              そして…絶対焼きそばには負けません！</p>
+          </details>
+          <details class="details">
+            <summary class="details-summary">成田'sキッチン</summary>
+            <p class="details-content">　11:00～<br>
+              現役DKが作る昔ならではの安いソース焼きそば<br>
+              <担当者の一言><br>
+              野菜たっぷり美味しい手作りソース焼きそばです。クレープでお腹いっぱいにはなりません。</p>
+          </details>
+          <details class="details">
+            <summary class="details-summary">NS商店</summary>
+            <p class="details-content">　11:00～<br>
+              ステッカーガチャや恋みくじなどなど販売します！</p>
+          </details>
+          <details class="details">
+            <summary class="details-summary">常設企画</summary>
+            <p class="details-content">　11:00～<br>
+              キャンパス全体を使って謎解きゲームに挑戦しよう！ 他にもM教室で射的ができたり、ブルックリンにはフォトスポットも!</p>
+          </details>
+          <details class="details">
+            <summary class="details-summary">ステージ企画~6つの企画~</summary>
+            　11:30～
+            <p>主な企画</p>
+            <ul>
+              <li><p>クイズ大会</p></li>
+              <p>Kahootを使って名古屋キャンパスのクイズを出題します。</p>
+              <li><p>ゲーム大会</p></li>
+            </ul>
+            <p>大乱闘スマッシュブラザーズのトーナメント戦でみんなで楽しく大乱闘しよう！<br />当日飛び込み参加も大歓迎！初心者の方も是非ご参加ください！</p>
+          </details>
+        </div>
+        <div class="info">
+          <h1>案内</h1>
+          <p>愛知県名古屋市中区新栄町2-3 YWCAビル5階</p>
+          <img src="media/index_madori.png"  width="800"  style="display: block; margin: auto;"/>
+        </div>
+        <div class="attention">
+          <h1>注意事項</h1>
+          <p class="text">事前にフォームにて、出席を表明されていない方は防犯対策の為、ご参加いただけません。<br />
+          また、大変申し訳ございませんが、ご参加いただけるのは、<br />名古屋キャンパス生の知人や親族、顔見知りのみとさせていただきます。<br />
+          (例:互いに顔を知らないネットで知り合った友人などや、名前を知らないけど仲良し！といった方もご遠慮願います。)<br />
+          また、保護者の方はご参加いただく場合事前にメンターにお伝えください。<br />
+          何かご不明な点がありましたら。キャンパス内にいる、カードを下げているスタッフまでお申し付けください。<br /></p>
+          
+        </div>
+        <div class="day">
+          <h1>当日について</h1>
+          <p class="text">当日、キャンパス内にはコスプレをしている方もおります。more…</p>
+        </div><!--やることメモ：メニューボタンを直す、背景をaboutと同じようにする、classを分かりやすくつける、
+          タイムスケジュールの中身を作る、上に上がるやつ作る、改行位置の調整、
+          scssで背景色をつける、範囲指定する、フォントなどを調整する、画像位置の調整　etc…-->
+        </div>
+        <div id="backgroundBase" class="bg"></div>
+        <div id="backgroundShapesCircle" class="bg"></div>
+        <div id="backgroundShapesLine" class="bg"></div>
+        <div id="backgroundShapesQuadrilateral" class="bg"></div>
+        <div id="backgroundShapesTriangle" class="bg"></div>
+      <div id="jump2Top"><a><img href="#" src="media/about_works211101144002Character.png" width="200"></a></div>
+    </div>
+  </div>
+    <script src="./js/header.js"></script>
+    <script src="./js/plugin/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+<style>
+  ul {
+display: flex;
+justify-content: center;
+}
+
+li {
+list-style: none;
+}
+
+li:nth-child(2) {
+margin: 0 10px;
+}
+.main img{margin: 50px;}
+</style>
+
+
+

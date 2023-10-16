@@ -1,0 +1,141 @@
+@import "../style.scss";
+body {
+  text-align: center;
+  background-image: url(../../media/index_bgMainNew.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: local;
+}
+#wrapper {
+  background-image: url(../../media/index_bgMainNew.png);
+  background-image: linear-gradient(180deg, #cc80cc, #817ed3);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: local;
+}
+#content {
+  max-height: calc(100vh - 70px);
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+  background-color: $contentbg;
+  backdrop-filter: blur(6px);
+  background-attachment: fixed;
+  z-index: 30;
+  max-height: calc(100vh - 65px);
+  position: relative;
+  & * {
+    z-index: 30;
+  }
+}
+.card {
+  & > img {
+    background-color: #ccc;
+  }
+}
+.domTemplate {
+  display: none;
+}
+details {
+  transition: 0.3s;
+  overflow: hidden;
+  margin-top: -10px;
+  padding-bottom: 20px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.details[open] {
+  margin-top: 0;
+  padding-bottom: 10px;
+}
+.details-summary {
+  display: block;
+  padding: 15px;
+  transition: 0.3s;
+  transform: translateY(10px);
+  background-color: #b697ff9a;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  &:hover {
+    cursor: pointer;
+  }
+}
+h1 {
+  border-bottom: 1px solid;
+}
+.details-summary::-webkit-details-marker {
+  display: none;
+}
+.details[open] .details-summary {
+  transform: translateY(0);
+}
+.details-content {
+  padding: 20px;
+  background-color: #f4a460;
+  border-bottom: 2px solid #871cdf;
+  border-left: 2px solid #871cdf;
+  border-right: 2px solid #871cdf
+}
+.bg {
+  margin-top: 65px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+#background {
+  &Base {
+    background-image: url(../../media/index_bgMainNew.png);
+    z-index: 20;
+  }
+  &Shapes {
+    &Circle {
+      background-image: url(../../media/index_bgShapeCircle.png);
+      background-size: 60%;
+      background-repeat: repeat;
+      z-index: 21;
+      animation: shapesAnim ease-in-out alternate both infinite 10s 0ms;
+    }
+    &Line {
+      background-image: url(../../media/index_bgShapeLine.png);
+      background-size: 60%;
+      background-repeat: repeat;
+      z-index: 22;
+      animation: shapesAnim ease-in-out alternate-reverse both infinite 12s 0ms;
+    }
+    &Quadrilateral {
+      background-image: url(../../media/index_bgShapeQuadrilateral.png);
+      background-size: 60%;
+      background-repeat: repeat;
+      z-index: 23;
+      animation: shapesAnim ease-in-out alternate-reverse both infinite 5s 0s;
+    }
+    &Triangle {
+      background-image: url(../../media/index_bgShapeTriangle.png);
+      background-size: 60%;
+      background-repeat: repeat;
+      z-index: 24;
+      animation: shapesAnim ease-in-out alternate both infinite 7s 0s;
+    }
+  }
+}
+.rogo {
+  background-color: #eaaf89a7;
+}
+.themeandtimetable {
+  background-color: #c59ce49b;
+}
+.text {
+  background-color: #ffd7a9a9;
+}
+#jump2Top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
