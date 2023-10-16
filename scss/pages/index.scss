@@ -1,5 +1,5 @@
 @import "../style.scss";
-body {
+#wrapper {
   text-align: center;
   background-image: url(../../media/index_bgMainNew.png);
   background-size: 100%;
@@ -74,10 +74,10 @@ h1 {
 }
 .details-content {
   padding: 20px;
-  background-color: #f4a460;
+  background-color: #b193e9c7;
   border-bottom: 2px solid #871cdf;
   border-left: 2px solid #871cdf;
-  border-right: 2px solid #871cdf
+  border-right: 2px solid #871cdf;
 }
 .bg {
   margin-top: 65px;
@@ -138,4 +138,5 @@ h1 {
   position: fixed;
   bottom: 10px;
   right: 10px;
+  z-index: 900;
 }
