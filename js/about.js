@@ -59,20 +59,50 @@ document.addEventListener("DOMContentLoaded", (_) => {
           document.querySelector("#worksAccordion-collapseThree > .accordion-body").append(cn);
         });
       $("#illustTemplate").remove();
-      setLightboxOne(".zoomNagona");
-      setLightboxMany(".zoomWorksPoster");
-      setLightboxMany(".zoomWorksCharacter");
-      setLightboxMany(".zoomWorksIllust");
-      setLightboxMany(".zoomGoods");
-      setScrollbar("#content", 150, (_) => runScroll());
-      setScrollbar(".accordion-body", 300, false);
-      fixScrollbar();
-      setScrollSpeed("#backgroundBase", 1);
-      setScrollSpeed("#backgroundShapesCircle", 1.4);
-      setScrollSpeed("#backgroundShapesLine", 1.6);
-      setScrollSpeed("#backgroundShapesQuadrilateral", 1.8);
-      setScrollSpeed("#backgroundShapesTriangle", 2);
-      runScroll();
+      fetch("./js/goods.json")
+        .then((r) => r.json())
+        .then((dd) => {
+          let goodsDataArray = dd["p"]
+            .sort((a, b) => Math.random() - Math.random())
+            .sort((a, b) => Math.random() - Math.random())
+            .sort((a, b) => Math.random() - Math.random());
+          let result = [];
+          for (let i = 0, j = goodsDataArray.length; i < j; i += 2) {
+            result.push(goodsDataArray.slice(i, i + 2));
+          }
+          goodsDataArray = result;
+          goodsDataArray.forEach((e) => {
+            let cn = document.querySelector("#goodsTemplate").cloneNode(true);
+            e.forEach((ee, i) => {
+              cn.querySelectorAll("img")[i].src = "./media/" + ee.p.substring(0, ee.p.length - 4) + "-thumb" + ee.p.substring(ee.p.length - 4, ee.p.length);
+              cn.querySelectorAll("a")[i].setAttribute("href", "./media/" + ee.p);
+              cn.querySelectorAll("img")[i].setAttribute("title", ee.n + " ─ " + (ee.s == "販売中" ? "text-success" : ee.s == "販売終了" ? "text-danger" : "準備中") + '<br class="pc sp">金券 ' + ee.c + " 枚");
+              cn.querySelectorAll("h4")[i].textContent = ee.n;
+              cn.querySelectorAll("h6")[i].textContent = ee.c;
+              cn.querySelectorAll("p")[i].classList.add(ee.s == "sell" ? "text-success" : ee.s == "sold" ? "text-danger" : "_");
+              cn.querySelectorAll("p")[i].textContent = ee.s == "販売中" ? "text-success" : ee.s == "販売終了" ? "text-danger" : "準備中";
+            });
+            cn.classList.remove("domTemplate");
+            cn.id = "";
+            document.querySelector("#goodsContainer").append(cn);
+          });
+          $("#goodsTemplate").remove();
+          setLightboxOne(".zoomNagona");
+          setLightboxMany(".zoomWorksPoster");
+          setLightboxMany(".zoomWorksCharacter");
+          setLightboxMany(".zoomWorksIllust");
+          setLightboxMany(".zoomGoods");
+          setScrollbar("#content", 150, (_) => runScroll());
+          setScrollbar(".accordion-body", 300, false);
+          fixScrollbar();
+          setScrollSpeed("#backgroundBase", 1);
+          setScrollSpeed("#backgroundLines", 1);
+          setScrollSpeed("#backgroundShapesCircle", 1.4);
+          setScrollSpeed("#backgroundShapesLine", 1.6);
+          setScrollSpeed("#backgroundShapesQuadrilateral", 1.8);
+          setScrollSpeed("#backgroundShapesTriangle", 2);
+          runScroll();
+        });
     });
 });
 function setScrollbar(e, a, c) {

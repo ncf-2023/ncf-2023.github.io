@@ -1,0 +1,48 @@
+{
+  "rule":[
+    {
+      "p":"path to pic (string)",
+      "n":"Name of item (string)",
+      "c":"Cost of item (integer)",
+      "s":"Status of item (string:[preparation, sell, sold])"
+    }
+  ],
+  "p":[
+    {
+      "p":"about_goodsBadge.png",
+      "n":"缶バッジ",
+      "c":2,
+      "s":"preparation"
+    },
+    {
+      "p":"about_goodsSticker.png",
+      "n":"ステッカーガチャ",
+      "c":2,
+      "s":"preparation"
+    },
+    {
+      "p":"about_goodsEbifurya.jpg",
+      "n":"えびふりゃー",
+      "c":4,
+      "s":"preparation"
+    },
+    {
+      "p":"about_goodsShachihoko.jpg",
+      "n":"きんしゃち",
+      "c":4,
+      "s":"preparation"
+    },
+    {
+      "p":"about_goodsAmulet.png",
+      "n":"お守りキーホルダー",
+      "c":4,
+      "s":"preparation"
+    },
+    {
+      "p":"about_goodsFortune.png",
+      "n":"極端恋みくじ",
+      "c":1,
+      "s":"preparation"
+    }
+    ]
+}

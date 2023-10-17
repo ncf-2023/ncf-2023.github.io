@@ -74,7 +74,7 @@ h1 {
 }
 .details-content {
   padding: 20px;
-  background-color: #b193e9c7;
+  background-color: #ffd7a9a9;
   border-bottom: 2px solid #871cdf;
   border-left: 2px solid #871cdf;
   border-right: 2px solid #871cdf;
@@ -140,3 +140,25 @@ h1 {
   right: 10px;
   z-index: 900;
 }
+ul{ display: flex;
+  justify-content: center;
+}li{ list-style: none;}
+  
+  li:nth-child(2) 
+ { margin: 0 10px;
+  
+  .main img{margin: 50px;}
+}
+button{
+  background-color:#ffd7a9a9
+
+}
+ 
+  
+  
+  
+  
+  
+  
+
+  
