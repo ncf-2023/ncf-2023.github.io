@@ -7,6 +7,7 @@ function setLightboxOne(q) {
       animationSlide: false,
       loop: false,
       overlayOpacity: 0.8,
+      captionsData: "alt",
     })
   );
 }
@@ -17,6 +18,7 @@ function setLightboxMany(q) {
       navText: ['<img style="width:inherit;" src="../media/chevron_left.svg">', '<img style="width:inherit;" src="../media/chevron_right.svg">'],
       // captionsData: "alt",
       overlayOpacity: 0.8,
+      captionsData: "alt",
     })
   );
 }

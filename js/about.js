@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", (_) => {
           let cn = document.querySelector("#posterTemplate").cloneNode(true);
           cn.querySelector("img").src = "./media/" + e.f.substring(0, e.f.length - 4) + "-thumb" + e.f.substring(e.f.length - 4, e.f.length);
           cn.querySelector("a").setAttribute("href", "./media/" + e.f);
-          cn.querySelector("img").setAttribute("title", e.t + " ─ " + (e.a || "匿名希望") + '<br class="pc sp">' + e.d);
+          cn.querySelector("img").setAttribute("title", e.t + "  by " + (e.a || "匿名希望") + "  " + e.d);
+          cn.querySelector("img").setAttribute("alt", e.t + " ─ " + (e.a || "匿名希望") + '<br class="pc sp">' + e.d);
           cn.querySelector("h4").textContent = e.t;
           cn.querySelector("h6").textContent = e.a || "匿名希望";
           cn.querySelector("h6").classList.add(e.d ? "mb-3" : "mb-0");
@@ -30,7 +31,8 @@ document.addEventListener("DOMContentLoaded", (_) => {
           let cn = document.querySelector("#characterTemplate").cloneNode(true);
           cn.querySelector("img").src = "./media/" + e.f.substring(0, e.f.length - 4) + "-thumb" + e.f.substring(e.f.length - 4, e.f.length);
           cn.querySelector("a").setAttribute("href", "./media/" + e.f);
-          cn.querySelector("img").setAttribute("title", e.t + " ─ " + (e.a || "匿名希望") + '<br class="pc sp">' + e.d);
+          cn.querySelector("img").setAttribute("title", e.t + "  by " + (e.a || "匿名希望") + "  " + e.d);
+          cn.querySelector("img").setAttribute("alt", e.t + " ─ " + (e.a || "匿名希望") + '<br class="pc sp">' + e.d);
           cn.querySelector("h4").textContent = e.t;
           cn.querySelector("h6").textContent = e.a || "匿名希望";
           cn.querySelector("h6").classList.add(e.d ? "mb-3" : "mb-0");
@@ -49,7 +51,8 @@ document.addEventListener("DOMContentLoaded", (_) => {
           let cn = document.querySelector("#illustTemplate").cloneNode(true);
           cn.querySelector("img").src = "./media/" + e.f.substring(0, e.f.length - 4) + "-thumb" + e.f.substring(e.f.length - 4, e.f.length);
           cn.querySelector("a").setAttribute("href", "./media/" + e.f);
-          cn.querySelector("img").setAttribute("title", e.t + " ─ " + (e.a || "匿名希望") + '<br class="pc sp">' + e.d);
+          cn.querySelector("img").setAttribute("title", e.t + "  by " + (e.a || "匿名希望") + "  " + e.d);
+          cn.querySelector("img").setAttribute("alt", e.t + " ─ " + (e.a || "匿名希望") + '<br class="pc sp">' + e.d);
           cn.querySelector("h4").textContent = e.t;
           cn.querySelector("h6").textContent = e.a || "匿名希望";
           cn.querySelector("h6").classList.add(e.d ? "mb-3" : "mb-0");
@@ -76,11 +79,12 @@ document.addEventListener("DOMContentLoaded", (_) => {
             e.forEach((ee, i) => {
               cn.querySelectorAll("img")[i].src = "./media/" + ee.p.substring(0, ee.p.length - 4) + "-thumb" + ee.p.substring(ee.p.length - 4, ee.p.length);
               cn.querySelectorAll("a")[i].setAttribute("href", "./media/" + ee.p);
-              cn.querySelectorAll("img")[i].setAttribute("title", ee.n + " ─ " + (ee.s == "販売中" ? "text-success" : ee.s == "販売終了" ? "text-danger" : "準備中") + '<br class="pc sp">金券 ' + ee.c + " 枚");
+              cn.querySelectorAll("img")[i].setAttribute("alt", ee.n + " ─ " + (ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中") + '<br class="pc sp">金券 ' + ee.c + " 枚");
+              cn.querySelectorAll("img")[i].setAttribute("title", ee.n + " 金券" + ee.c + "枚 ─ " + (ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中"));
               cn.querySelectorAll("h4")[i].textContent = ee.n;
               cn.querySelectorAll("h6")[i].textContent = ee.c;
               cn.querySelectorAll("p")[i].classList.add(ee.s == "sell" ? "text-success" : ee.s == "sold" ? "text-danger" : "_");
-              cn.querySelectorAll("p")[i].textContent = ee.s == "販売中" ? "text-success" : ee.s == "販売終了" ? "text-danger" : "準備中";
+              cn.querySelectorAll("p")[i].textContent = ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中";
             });
             cn.classList.remove("domTemplate");
             cn.id = "";
@@ -102,6 +106,9 @@ document.addEventListener("DOMContentLoaded", (_) => {
           setScrollSpeed("#backgroundShapesQuadrilateral", 1.8);
           setScrollSpeed("#backgroundShapesTriangle", 2);
           runScroll();
+          $(".jumpToTop").on("click", (_) => {
+            $("#content").mCustomScrollbar("scrollTo", "top", { scrollInertia: 800 });
+          });
         });
     });
 });
@@ -111,8 +118,9 @@ function setScrollbar(e, a, c) {
     theme: "rounded-dots-dark",
     scrollbarPosition: "inside",
     scrollInertia: 350,
+    setHeight: "90%",
     mouseWheel: { scrollAmount: a },
-    scrollButtons: { enable: false },
+    scrollButtons: { enable: true },
     callbacks: {
       whileScrolling: c,
     },

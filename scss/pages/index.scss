@@ -25,6 +25,8 @@
   z-index: 30;
   max-height: calc(100vh - 65px);
   position: relative;
+  max-width: 1250px;
+  margin: auto;
   & * {
     z-index: 30;
   }
@@ -140,25 +142,21 @@ h1 {
   right: 10px;
   z-index: 900;
 }
-ul{ display: flex;
+ul {
+  display: flex;
   justify-content: center;
-}li{ list-style: none;}
-  
-  li:nth-child(2) 
- { margin: 0 10px;
-  
-  .main img{margin: 50px;}
 }
-button{
-  background-color:#ffd7a9a9
-
+li {
+  list-style: none;
 }
- 
-  
-  
-  
-  
-  
-  
 
-  
+li:nth-child(2) {
+  margin: 0 10px;
+
+  .main img {
+    margin: 50px;
+  }
+}
+button {
+  background-color: #ffd7a9a9;
+}

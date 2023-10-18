@@ -20,7 +20,7 @@
 }
 
 .headingUnderline {
-  border-top: 3px solid $darkpurple;
+  border-top: 3px solid $purple-0;
   opacity: 1;
   margin-top: 5px;
 }
@@ -44,7 +44,7 @@
   background-color: transparent;
   .accordion-button {
     background-color: $contentbg;
-    border: solid $darkpurple;
+    border: solid $purple-0;
     border-width: 0 0 3px 3px;
     font-size: 28px;
     &:focus {
@@ -162,7 +162,7 @@
     max-height: 800px;
     overflow: hidden;
     background-color: $contentbg;
-    border-left: 3px solid $darkpurple;
+    border-left: 3px solid $purple-0;
     padding: 0.25rem 0 0.25rem 0.75rem;
     margin-left: 0.5rem;
     & .row {
@@ -185,4 +185,61 @@
 .zoomGoods {
   transition: transform 80ms ease-in-out 0ms;
   transform: scale(1);
+}
+
+.jumpToTop {
+  z-index: 1035;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  @include sp {
+    width: 120px;
+    height: 120px;
+    right: 30px;
+  }
+  & img {
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+    transition-property: filter, transform;
+  }
+  &::before {
+    opacity: 0;
+    content: "Go To Top!";
+    display: block;
+    position: absolute;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+    transition-property: opacity;
+    z-index: 1036;
+    width: 180px;
+    height: 200px;
+    line-height: 200px;
+    @include sp {
+      width: 110px;
+      height: 120px;
+      line-height: 20px;
+      margin-top: 33px;
+      font-size: 15px;
+      content: "Go To\aTop!";
+      white-space: pre;
+    }
+    text-align: center;
+    filter: brightness(0) grayscale(0) invert(63%) sepia(10%) saturate(1285%) hue-rotate(241deg) brightness(108%) contrast(81%);
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 17px;
+  }
+  cursor: pointer;
+  &:hover:not(:active) {
+    & img {
+      filter: brightness(10) grayscale(1);
+      transform: rotateY(360deg);
+    }
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+.mCSB_buttonUp,
+.mCSB_buttonDown {
+  opacity: 0 !important;
 }

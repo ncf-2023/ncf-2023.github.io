@@ -17,3 +17,61 @@
   max-height: 70px;
   z-index: 1020;
 }
+.offcanvas {
+  background-color: rgba($purple-10, 0.5);
+  backdrop-filter: blur(5px);
+
+  &-backdrop {
+    background-color: #ccc;
+  }
+  &-header {
+    background-color: $purple-5;
+  }
+  &-title {
+    font-family: "Mochiy Pop One", sans-serif;
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    a {
+      display: flex;
+      line-height: 40px;
+      text-decoration: none;
+      border: 2px $purple-2 solid;
+      background-color: $purple-8;
+      border-radius: 9999px;
+      padding: 8px;
+      transition-property: background, border, transform, padding, font-weight;
+      transition-duration: 80ms;
+      transition-timing-function: ease-in-out;
+      &:not(:last-of-type) {
+        margin-bottom: 5px;
+      }
+      &:hover {
+        border-color: $purple-0;
+        border-width: 5px;
+        padding: 5px;
+        transform: scale(1.02);
+        font-weight: bold;
+        &::after {
+          transform: translateX(315px);
+        }
+      }
+      span,
+      img {
+        font-size: 40px;
+        margin-right: 5px;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        background-image: url(../../media/accordion-btn-icon.svg);
+        width: 40px;
+        height: 40px;
+        transform: translateX(300px);
+        transition: transform 200ms ease-in-out;
+      }
+    }
+  }
+}

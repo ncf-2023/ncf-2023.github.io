@@ -1,4 +1,4 @@
 *.DS_Store
 *.bat
 /node_modules
-/.vscode
+.vscode/
