@@ -13,14 +13,19 @@
 
       <div class="main" id="content">
         <div class="png">
-          <ul>
-            <li><img src="media/about_works231100574001Character.png" alt="" height="400" ></li> 
-          <li><img src="media/about_works231100705001Character.png" alt="" height="400"  ></li> 
-            <li><img src="media/about_works211101144001Character.png" alt="" height="400" ></li>
-          </ul>
-          
+          <div class="imag">
+            <img src="./media/about_works231100574001Character.png" alt="">
+          </div>
+          <div class="imag">
+            <img src="./media/about_works231100705001Character.png" alt="">
+            
+          </div>
+          <div class="imag">
+            <img src="./media/about_works211101144001Character.png" alt="">
+          </div>
+          <!--画像の比率が違いすぎて崩れてしまう…-->
         </div><!--scssでflexおねがいします-->
-        <div class="rogo"><img src="media/index_logostr.png" alt="文字だけロゴ" width="1000" style="display: block; margin: auto;" /></div>
+        <div class="logo"><img src="media/index_logostr.png" alt="文字だけロゴ" style="display: block; margin: auto;" /></div>
         <div class="themeandtimetable">
           <h3><p>テーマ<br class="pc"/>〜ハロウィン〜<br class="pc"/>開催日時:10/28（土）</p></h3>
         </div>
@@ -83,9 +88,10 @@
         <div class="day">
           <h1>当日について</h1>
           <p class="text">当日、キャンパス内にはコスプレをしている方もおります。more…</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLt7pminOkk4_M2p1jzP_CzsbZt94dRylURq42Re-i8M5b5A/viewform?usp=sf_link" class="button">
+            <button>お問い合わせフォーム</button>
         </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLt7pminOkk4_M2p1jzP_CzsbZt94dRylURq42Re-i8M5b5A/viewform?usp=sf_link" class="button">
-          <button>お問い合わせフォーム</button>
+
         </a>
         <!--やることメモ：メニューボタンを直す、背景をaboutと同じようにする、classを分かりやすくつける、
           タイムスケジュールの中身を作る、上に上がるやつ作る、改行位置の調整、
@@ -96,13 +102,16 @@
         <div id="backgroundShapesLine" class="bg"></div>
         <div id="backgroundShapesQuadrilateral" class="bg"></div>
         <div id="backgroundShapesTriangle" class="bg"></div>
-        <div id="jump2Top"><a><img href="#" src="media/about_works211101144002Character.png" width="200"></a></div>
-      </div>
+        <div class="jumpToTop">
+          <img src="./media/about_works211101144002Character.png" width="200" />
+        </div>
+        </div>
     </div>
   </div>
     <script src="./js/plugin/jquery-3.7.1.min.js"></script>
     <script src="./js/plugin/bootstrap.bundle.min.js"></script>
     <script src="./js/header.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
 

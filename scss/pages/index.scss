@@ -127,8 +127,11 @@ h1 {
     }
   }
 }
-.rogo {
+.logo {
   background-color: #eaaf89a7;
+  > img {
+    max-height: 600px;
+  }
 }
 .themeandtimetable {
   background-color: #c59ce49b;
@@ -159,4 +162,74 @@ li:nth-child(2) {
 }
 button {
   background-color: #ffd7a9a9;
+}
+.png {
+  display: flex;
+  justify-content: center;
+  & > div {
+    height: 400px;
+    width: 200px;
+    @include sp {
+      width: 140px;
+    }
+    display: flex;
+    justify-content: center;
+    & > img {
+      position: absolute;
+      height: 400px;
+    }
+  }
+}
+.jumpToTop {
+  z-index: 1035;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  @include sp {
+    width: 120px;
+    height: 120px;
+    right: 30px;
+  }
+  & img {
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+    transition-property: filter, transform;
+  }
+  &::before {
+    opacity: 0;
+    content: "Go To Top!";
+    display: block;
+    position: absolute;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+    transition-property: opacity;
+    z-index: 1036;
+    width: 180px;
+    height: 200px;
+    line-height: 200px;
+    @include sp {
+      width: 110px;
+      height: 120px;
+      line-height: 20px;
+      margin-top: 33px;
+      font-size: 15px;
+      content: "Go To\aTop!";
+      white-space: pre;
+    }
+    text-align: center;
+    filter: brightness(0) grayscale(0) invert(63%) sepia(10%) saturate(1285%)
+      hue-rotate(241deg) brightness(108%) contrast(81%);
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 17px;
+  }
+  cursor: pointer;
+  &:hover:not(:active) {
+    & img {
+      filter: brightness(10) grayscale(1);
+      transform: rotateY(360deg);
+    }
+    &::before {
+      opacity: 1;
+    }
+  }
 }
