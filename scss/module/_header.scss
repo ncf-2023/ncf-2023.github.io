@@ -5,6 +5,10 @@
     border-radius: 3px;
   }
   & > div > div > .navbar-nav > li > a {
+    transition: transform 80ms ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
     & > img {
       height: 60px;
     }
