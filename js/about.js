@@ -65,10 +65,7 @@ document.addEventListener("DOMContentLoaded", (_) => {
       fetch("./js/goods.json")
         .then((r) => r.json())
         .then((dd) => {
-          let goodsDataArray = dd["p"]
-            .sort((a, b) => Math.random() - Math.random())
-            .sort((a, b) => Math.random() - Math.random())
-            .sort((a, b) => Math.random() - Math.random());
+          let goodsDataArray = dd["p"];
           let result = [];
           for (let i = 0, j = goodsDataArray.length; i < j; i += 2) {
             result.push(goodsDataArray.slice(i, i + 2));

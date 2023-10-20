@@ -14,6 +14,12 @@
       "c":2,
       "s":"preparation"
     },
+      {
+        "p":"about_goodsAmulet.png",
+        "n":"お守りキーホルダー",
+        "c":4,
+        "s":"preparation"
+      },
     {
       "p":"about_goodsSticker.png",
       "n":"ステッカーガチャ",
@@ -29,12 +35,6 @@
     {
       "p":"about_goodsShachihoko.jpg",
       "n":"きんしゃち",
-      "c":4,
-      "s":"preparation"
-    },
-    {
-      "p":"about_goodsAmulet.png",
-      "n":"お守りキーホルダー",
       "c":4,
       "s":"preparation"
     },
