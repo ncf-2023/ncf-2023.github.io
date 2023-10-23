@@ -12,5 +12,24 @@ $purple-10: #eacbf1;
 $contentbgbasergb: rgb(255, 255, 255);
 $contentbg: rgba($contentbgbasergb, 0.536);
 $contentbg170: rgba($contentbgbasergb, 0.67);
-// 色聞く
-$txtboxOrange: #feee9ca5;
+$txtboxOrangebasergb: rgb(254, 238, 156);
+$txtboxOrange: rgba($txtboxOrangebasergb, 0.647);
+$txtboxOrange137: rgba($txtboxOrangebasergb, 0.536);
+$txtboxOrange170: rgba($txtboxOrangebasergb, 0.67);
+
+@mixin btncol($hue: 216, $sat: 98, $lit: 52, $wb: 255) {
+  --bs-btn-color: rgb(#{$wb}, #{$wb}, #{$wb});
+  --bs-btn-bg: hsl(#{$hue}, #{$sat}%, #{$lit}%);
+  --bs-btn-border-color: hsl(#{$hue}, #{$sat}%, #{$lit}%);
+  --bs-btn-hover-color: rgb(#{$wb}, #{$wb}, #{$wb});
+  --bs-btn-hover-bg: hsl(#{$hue}, #{($sat - 8)}%, #{($lit - 8)}%);
+  --bs-btn-hover-border-color: hsl(#{$hue}, #{($sat - 7)}%, #{($lit - 10)}%);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: rgb(#{$wb}, #{$wb}, #{$wb});
+  --bs-btn-active-bg: hsl(#{$hue}, #{($sat - 7)}%, #{($lit - 10)}%);
+  --bs-btn-active-border-color: hsl(#{$hue}, #{($sat - 8)}%, #{($lit - 13)}%);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: rgb(#{$wb}, #{$wb}, #{$wb});
+  --bs-btn-disabled-bg: hsl(#{$hue}, #{$sat}%, #{$lit}%);
+  --bs-btn-disabled-border-color: hsl(#{$hue}, #{$sat}%, #{$lit}%);
+}

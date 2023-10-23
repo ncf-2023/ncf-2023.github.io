@@ -1,3 +1,4 @@
+let sc = [];
 document.addEventListener("DOMContentLoaded", (_) => {
   fetch("./js/works.json")
     .then((r) => r.json())
@@ -93,50 +94,19 @@ document.addEventListener("DOMContentLoaded", (_) => {
           setLightboxMany(".zoomWorksCharacter");
           setLightboxMany(".zoomWorksIllust");
           setLightboxMany(".zoomGoods");
-          setScrollbar("#content", 150, (_) => runScroll());
+          setScrollbar("#content", 150, (_) => runScroll(sc));
           setScrollbar(".accordion-body", 300, false);
           fixScrollbar();
-          setScrollSpeed("#backgroundBase", 1);
-          setScrollSpeed("#backgroundLines", 1);
-          setScrollSpeed("#backgroundShapesCircle", 1.4);
-          setScrollSpeed("#backgroundShapesLine", 1.6);
-          setScrollSpeed("#backgroundShapesQuadrilateral", 1.8);
-          setScrollSpeed("#backgroundShapesTriangle", 2);
-          runScroll();
+          setScrollSpeed("#backgroundBase", 0.6, sc);
+          setScrollSpeed("#backgroundLines", 0.6, sc);
+          setScrollSpeed("#backgroundShapesCircle", 1.4, sc);
+          setScrollSpeed("#backgroundShapesLine", 1.6, sc);
+          setScrollSpeed("#backgroundShapesQuadrilateral", 1.8, sc);
+          setScrollSpeed("#backgroundShapesTriangle", 2, sc);
+          runScroll(sc);
           $(".jumpToTop").on("click", (_) => {
             $("#content").mCustomScrollbar("scrollTo", "top", { scrollInertia: 800 });
           });
         });
     });
 });
-function setScrollbar(e, a, c) {
-  $(e).mCustomScrollbar({
-    axis: "y",
-    theme: "rounded-dots-dark",
-    scrollbarPosition: "inside",
-    scrollInertia: 350,
-    mouseWheel: { scrollAmount: a },
-    scrollButtons: { enable: true },
-    callbacks: {
-      whileScrolling: c,
-    },
-  });
-}
-function fixScrollbar() {
-  document.querySelectorAll(".mCSB_dragger").forEach((e) => {
-    let el = e.querySelector(".mCSB_draggerRail");
-    e.after(el);
-  });
-}
-let scrollContent = [];
-function runScroll() {
-  scrollContent.forEach((e) => e());
-}
-function setScrollSpeed(e, t) {
-  scrollContent.push((_) => {
-    let root = document.querySelector("#content > div > .mCSB_container");
-    let rootScrollAmount = Number(root.style.top.substring(0, root.style.top.length - 2));
-    document.querySelector(e).style.top = String(rootScrollAmount * t) + "px";
-    document.querySelector(e).style.height = String(root.clientHeight * t) + "px";
-  });
-}
