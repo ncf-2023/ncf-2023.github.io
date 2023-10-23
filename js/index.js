@@ -13,5 +13,7 @@ function setup() {
   $(".jumpToTop").on("click", (_) => {
     $("#content").mCustomScrollbar("scrollTo", "top", { scrollInertia: 800 });
   });
-  document.querySelectorAll("#impactFullbody img").forEach((e) => (e.style.animationPlayState = "running"));
+  document.querySelectorAll("#impactFullbody img").forEach((e) => {
+    e.style.animationPlayState = "running";
+  });
 }

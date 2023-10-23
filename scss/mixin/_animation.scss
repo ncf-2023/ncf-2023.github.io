@@ -1,9 +1,9 @@
 @keyframes shapesAnim {
   0% {
-    transform: translateY(0px) rotateY(0deg);
+    transform: translateY(0px) scaleY(1) translateZ(0.01px);
   }
   100% {
-    transform: translateY(100px) rotateY(5deg);
+    transform: translateY(100px) scaleY(1.03) translateZ(0.01px);
   }
 }
 @keyframes fadeinFromBottom {

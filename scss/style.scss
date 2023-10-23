@@ -21,6 +21,7 @@
 body {
   font-family: "Kosugi Maru", "Noto Color Emoji", sans-serif;
   font-size: 1.2rem;
+  transform: translateZ(0.01px);
 }
 h1 {
   font-family: "Mochiy Pop One", sans-serif;
@@ -37,8 +38,28 @@ h1 {
     height: 35px;
     margin: 0 auto;
     display: block;
-    transform: translateY(-2.5rem) rotateZ(2deg);
-    background-image: linear-gradient(50deg, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170);
+    transform: translateZ(0.01px) translateY(-2.5rem) rotateZ(2deg);
+    background-image: linear-gradient(
+      50deg,
+      $contentbg,
+      $contentbg170,
+      $contentbg,
+      $contentbg170,
+      $contentbg,
+      $contentbg170,
+      $contentbg,
+      $contentbg170,
+      $contentbg,
+      $contentbg170,
+      $contentbg,
+      $contentbg170,
+      $contentbg,
+      $contentbg170,
+      $contentbg,
+      $contentbg170,
+      $contentbg,
+      $contentbg170
+    );
   }
   background-color: $txtboxOrange;
   padding: 2rem 1rem;
@@ -51,8 +72,28 @@ h1 {
     height: 35px;
     margin: 0 auto;
     display: block;
-    transform: translateY(-2.5rem) rotateZ(2deg);
-    background-image: linear-gradient(50deg, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170);
+    transform: translateZ(0.01px) translateY(-2.5rem) rotateZ(2deg);
+    background-image: linear-gradient(
+      50deg,
+      $txtboxOrange137,
+      $txtboxOrange170,
+      $txtboxOrange137,
+      $txtboxOrange170,
+      $txtboxOrange137,
+      $txtboxOrange170,
+      $txtboxOrange137,
+      $txtboxOrange170,
+      $txtboxOrange137,
+      $txtboxOrange170,
+      $txtboxOrange137,
+      $txtboxOrange170,
+      $txtboxOrange137,
+      $txtboxOrange170,
+      $txtboxOrange137,
+      $txtboxOrange170,
+      $txtboxOrange137,
+      $txtboxOrange170
+    );
   }
   background-color: $contentbg;
   padding: 2rem 1rem;
@@ -60,6 +101,7 @@ h1 {
 }
 .jumpToTop {
   z-index: 1035;
+  transform: translateZ(0.01px);
   position: fixed;
   right: 10px;
   bottom: 10px;
@@ -95,7 +137,8 @@ h1 {
       white-space: pre;
     }
     text-align: center;
-    filter: brightness(0) grayscale(0) invert(63%) sepia(10%) saturate(1285%) hue-rotate(241deg) brightness(108%) contrast(81%);
+    filter: brightness(0) grayscale(0) invert(63%) sepia(10%) saturate(1285%)
+      hue-rotate(241deg) brightness(108%) contrast(81%);
     font-family: "Mochiy Pop One", sans-serif;
     font-size: 17px;
   }
@@ -103,7 +146,7 @@ h1 {
   &:hover:not(:active) {
     & img {
       filter: brightness(10) grayscale(1);
-      transform: rotateY(360deg);
+      transform: rotateY(360deg) translateZ(0.01px);
     }
     &::before {
       opacity: 1;
@@ -128,7 +171,7 @@ h1 {
     &:not(.collapsed) {
       color: unset;
       &::after {
-        transform: rotate(90deg);
+        transform: translateZ(0.01px) rotate(90deg);
       }
     }
     &::after {
@@ -164,7 +207,6 @@ h1 {
   }
 }
 .bg {
-  margin-top: 65px;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -172,11 +214,13 @@ h1 {
   top: 0px;
   background-size: cover;
   background-repeat: repeat-y;
+  transform: translateZ(0.01px);
 }
 #background {
   &Base {
     background-image: linear-gradient(180deg, #cc80cc, #817ed3);
     z-index: 20;
+    transform: translateZ(0.01px);
   }
   &Lines {
     background-image: url(../../media/index_bgLines.png);
@@ -185,6 +229,7 @@ h1 {
     background-repeat: repeat;
     filter: blur(5px);
     opacity: 0.4;
+    transform: translateZ(0.01px);
   }
   &Shapes {
     &Circle {
@@ -227,8 +272,10 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: local;
+  transform: translateZ(0.01px);
 }
 #content {
+  transform: translateZ(0.01px);
   background-color: $contentbg;
   backdrop-filter: blur(6px);
   background-attachment: fixed;
