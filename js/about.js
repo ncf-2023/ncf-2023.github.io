@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", (_) => {
               cn.querySelectorAll("img")[i].setAttribute("alt", ee.n + " ─ " + (ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中") + '<br class="pc sp">金券 ' + ee.c + " 枚");
               cn.querySelectorAll("img")[i].setAttribute("title", ee.n + " 金券" + ee.c + "枚 ─ " + (ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中"));
               cn.querySelectorAll("h4")[i].textContent = ee.n;
-              cn.querySelectorAll("h6")[i].textContent = ee.c;
+              cn.querySelectorAll("h6")[i].textContent = "金券 " + ee.c + " 枚";
               cn.querySelectorAll("p")[i].classList.add(ee.s == "sell" ? "text-success" : ee.s == "sold" ? "text-danger" : "_");
               cn.querySelectorAll("p")[i].textContent = ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中";
             });
