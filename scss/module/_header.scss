@@ -109,6 +109,14 @@
     font-family: "Mochiy Pop One", sans-serif;
     font-size: 32px;
     text-align: center;
+    & span {
+      display: inline-block;
+      @for $i from 1 through 7 {
+        &:nth-of-type(#{$i}) {
+          animation: turn 2.5s (100ms * ($i - 1)) linear infinite forwards;
+        }
+      }
+    }
   }
   &-character {
     width: 200px;
