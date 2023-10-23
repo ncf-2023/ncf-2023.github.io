@@ -1,5 +1,18 @@
 let scrollContent = [];
 document.addEventListener("DOMContentLoaded", setup);
+window.onload = loadend;
+function loadend() {
+  document.querySelector("#wrapper").classList.remove("hidden");
+  setTimeout(() => {
+    document.querySelector(".loading").classList.add("hide");
+  }, 2000);
+  setTimeout(() => {
+    document.querySelector(".loading").classList.add("hidden");
+    document.querySelectorAll("#impactFullbody img").forEach((e) => {
+      e.style.animationPlayState = "running";
+    });
+  }, 2800);
+}
 function setup() {
   setScrollbar("#content", 150, (_) => runScroll(scrollContent));
   fixScrollbar();
@@ -12,8 +25,5 @@ function setup() {
   runScroll(scrollContent);
   $(".jumpToTop").on("click", (_) => {
     $("#content").mCustomScrollbar("scrollTo", "top", { scrollInertia: 800 });
-  });
-  document.querySelectorAll("#impactFullbody img").forEach((e) => {
-    e.style.animationPlayState = "running";
   });
 }

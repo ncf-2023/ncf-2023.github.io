@@ -110,3 +110,13 @@ document.addEventListener("DOMContentLoaded", (_) => {
         });
     });
 });
+window.onload = loadend;
+function loadend() {
+  document.querySelector("#wrapper").classList.remove("hidden");
+  setTimeout(() => {
+    document.querySelector(".loading").classList.add("hide");
+  }, 2000);
+  setTimeout(() => {
+    document.querySelector(".loading").classList.add("hidden");
+  }, 2800);
+}
