@@ -24,6 +24,13 @@
 .offcanvas {
   background-color: rgba($purple-10, 0.5);
   backdrop-filter: blur(5px);
+  &.offcanvas-end {
+    transform: translateX(100%) translateZ(5px);
+  }
+  &.show:not(.hiding),
+  &.showing {
+    transform: translateZ(5px);
+  }
 
   &-backdrop {
     background-color: #ccc;
