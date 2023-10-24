@@ -8,81 +8,81 @@
 }
 @keyframes fadeinFromBottom {
   0% {
-    transform: translateY(20px);
+    transform: translateY(20px) translateZ(4px);
     opacity: 0;
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(0px) translateZ(4px);
     opacity: 1;
   }
 }
 @keyframes jump {
   0% {
-    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg);
+    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg) translateZ(6px);
   }
   5% {
-    transform: scale(1.05, 0.95) translate(0px, 3px) rotateY(0deg);
+    transform: scale(1.05, 0.95) translate(0px, 3px) rotateY(0deg) translateZ(6px);
   }
   10% {
-    transform: scale(1.1, 0.9) translate(0px, 7px) rotateY(0deg);
+    transform: scale(1.1, 0.9) translate(0px, 7px) rotateY(0deg) translateZ(6px);
   }
   15% {
-    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg);
+    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg) translateZ(6px);
   }
   20% {
-    transform: scale(0.95, 1.1) translate(0px, -50px) rotateY(0deg);
+    transform: scale(0.95, 1.1) translate(0px, -50px) rotateY(0deg) translateZ(6px);
   }
   27.5% {
-    transform: scale(0.95, 1.1) translate(0px, -10px) rotateY(0deg);
+    transform: scale(0.95, 1.1) translate(0px, -10px) rotateY(0deg) translateZ(6px);
   }
   32.5% {
-    transform: scale(1.1, 0.9) translate(0px, 7px) rotateY(0deg);
+    transform: scale(1.1, 0.9) translate(0px, 7px) rotateY(0deg) translateZ(6px);
   }
   40% {
-    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg);
+    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg) translateZ(6px);
   }
   50% {
-    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg);
+    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg) translateZ(6px);
   }
   55% {
-    transform: scale(1.05, 0.95) translate(0px, 3px) rotateY(0deg);
+    transform: scale(1.05, 0.95) translate(0px, 3px) rotateY(0deg) translateZ(6px);
   }
   60% {
-    transform: scale(1.1, 0.9) translate(0px, 7px) rotateY(65.455deg);
+    transform: scale(1.1, 0.9) translate(0px, 7px) rotateY(65.455deg) translateZ(6px);
   }
   65% {
-    transform: scale(1, 1) translate(0px, 0px) rotateY(130.909deg);
+    transform: scale(1, 1) translate(0px, 0px) rotateY(130.909deg) translateZ(6px);
   }
   70% {
-    transform: scale(0.95, 1.1) translate(0px, -50px) rotateY(163.636deg);
+    transform: scale(0.95, 1.1) translate(0px, -50px) rotateY(163.636deg) translateZ(6px);
   }
   77.5% {
-    transform: scale(0.95, 1.1) translate(0px, -10px) rotateY(65.455deg);
+    transform: scale(0.95, 1.1) translate(0px, -10px) rotateY(65.455deg) translateZ(6px);
   }
   82.5% {
-    transform: scale(1.1, 0.9) translate(0px, 7px) rotateY(0deg);
+    transform: scale(1.1, 0.9) translate(0px, 7px) rotateY(0deg) translateZ(6px);
   }
   90% {
-    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg);
+    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg) translateZ(6px);
   }
   100% {
-    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg);
+    transform: scale(1, 1) translate(0px, 0px) rotateY(0deg) translateZ(6px);
   }
 }
 @keyframes turn {
   0% {
-    transform: rotateY(0deg);
+    transform: rotateY(0deg) translateZ(6px);
   }
   40% {
-    transform: rotateY(0deg);
+    transform: rotateY(0deg) translateZ(6px);
   }
   50% {
-    transform: rotateY(360deg);
+    transform: rotateY(360deg) translateZ(6px);
   }
   60% {
-    transform: rotateY(0deg);
+    transform: rotateY(0deg) translateZ(6px);
   }
   100% {
-    transform: rotateY(0deg);
+    transform: rotateY(0deg) translateZ(6px);
   }
 }

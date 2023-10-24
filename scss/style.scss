@@ -13,6 +13,10 @@
 @import "./module/footer";
 @import "./module/header";
 
+html {
+  overflow: hidden;
+}
+
 * {
   user-select: none;
   -webkit-user-drag: none;

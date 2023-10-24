@@ -93,6 +93,9 @@
   transition: opacity 200ms linear 0ms;
   transform: translateZ(5px);
   opacity: 1;
+  * {
+    transform: translateZ(6px);
+  }
   &.hide {
     opacity: 0;
     overflow: hidden;
