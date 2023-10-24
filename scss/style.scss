@@ -43,27 +43,7 @@ h1 {
     margin: 0 auto;
     display: block;
     transform: translateZ(0.01px) translateY(-2.5rem) rotateZ(2deg);
-    background-image: linear-gradient(
-      50deg,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170
-    );
+    background-image: linear-gradient(50deg, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170);
   }
   background-color: $txtboxOrange;
   padding: 2rem 1rem;
@@ -77,27 +57,7 @@ h1 {
     margin: 0 auto;
     display: block;
     transform: translateZ(0.01px) translateY(-2.5rem) rotateZ(2deg);
-    background-image: linear-gradient(
-      50deg,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170
-    );
+    background-image: linear-gradient(50deg, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170);
   }
   background-color: $contentbg;
   padding: 2rem 1rem;
@@ -141,8 +101,7 @@ h1 {
       white-space: pre;
     }
     text-align: center;
-    filter: brightness(0) grayscale(0) invert(63%) sepia(10%) saturate(1285%)
-      hue-rotate(241deg) brightness(108%) contrast(81%);
+    filter: brightness(0) grayscale(0) invert(63%) sepia(10%) saturate(1285%) hue-rotate(241deg) brightness(108%) contrast(81%);
     font-family: "Mochiy Pop One", sans-serif;
     font-size: 17px;
   }
@@ -208,6 +167,11 @@ h1 {
     border-left: 3px solid $purple-0;
     padding: 0.25rem 0 0.25rem 0.75rem;
     margin-left: 0.5rem;
+    & > p {
+      @include sp {
+        font-size: 16px;
+      }
+    }
     & .row {
       position: relative;
     }
