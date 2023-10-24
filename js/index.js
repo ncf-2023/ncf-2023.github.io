@@ -26,4 +26,21 @@ function setup() {
   $(".jumpToTop").on("click", (_) => {
     $("#content").mCustomScrollbar("scrollTo", "top", { scrollInertia: 800 });
   });
+  let live = new Date().getTime();
+  let schedule = [
+    [1698458400000, 1698459300000, "オープニング"],
+    [1698459300000, 1698462000000, "クイズ大会"],
+    [1698462000000, 1698464700000, "手旗信号ゲーム"],
+    [1698464700000, 1698468300000, "ゲーム大会"],
+    [1698468300000, 1698470400000, "Short Movie 上映会"],
+    [1698470400000, 1698472800000, "ビンゴ大会"],
+    [1698472800000, 1698475500000, "マジック"],
+    [1698476100000, 1698477300000, "フィナーレ"],
+  ];
+  schedule.forEach((e) => {
+    if (e[0] <= live && live <= e[1]) {
+      document.querySelector("#liveEventName").textContent = e[2];
+      document.querySelector(".live").classList.remove("hidden");
+    }
+  });
 }
