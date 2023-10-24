@@ -42,12 +42,12 @@ h1 {
     height: 35px;
     margin: 0 auto;
     display: block;
-    transform: translateZ(0.01px) translateY(-2.5rem) rotateZ(2deg);
+    transform: translateZ(0.01px) translateY(-45px) rotateZ(2deg);
     background-image: linear-gradient(50deg, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170);
   }
   background-color: $txtboxOrange;
   padding: 2rem 1rem;
-  line-height: 3rem;
+  line-height: 1.5em;
 }
 .textbox-white {
   &::before {
@@ -56,12 +56,12 @@ h1 {
     height: 35px;
     margin: 0 auto;
     display: block;
-    transform: translateZ(0.01px) translateY(-2.5rem) rotateZ(2deg);
+    transform: translateZ(0.01px) translateY(-45px) rotateZ(2deg);
     background-image: linear-gradient(50deg, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170);
   }
   background-color: $contentbg;
-  padding: 2rem 1rem;
-  line-height: 3rem;
+  padding: 2em 1em;
+  line-height: 1.5em;
 }
 .jumpToTop {
   z-index: 1035;
