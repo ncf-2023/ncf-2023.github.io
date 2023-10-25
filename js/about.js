@@ -77,10 +77,10 @@ document.addEventListener("DOMContentLoaded", (_) => {
             e.forEach((ee, i) => {
               cn.querySelectorAll("img")[i].src = "./media/" + ee.p.substring(0, ee.p.length - 4) + "-thumb" + ee.p.substring(ee.p.length - 4, ee.p.length);
               cn.querySelectorAll("a")[i].setAttribute("href", "./media/" + ee.p);
-              cn.querySelectorAll("img")[i].setAttribute("alt", ee.n + " ─ " + (ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中") + '<br class="pc sp">金券 ' + ee.c + " 枚");
+              cn.querySelectorAll("img")[i].setAttribute("alt", ee.n + " ─ " + (ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中") + '<br class="pc sp">¥' + ee.c + " (税込)");
               cn.querySelectorAll("img")[i].setAttribute("title", ee.n + " 金券" + ee.c + "枚 ─ " + (ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中"));
               cn.querySelectorAll("h4")[i].textContent = ee.n;
-              cn.querySelectorAll("h6")[i].textContent = "金券 " + ee.c + " 枚";
+              cn.querySelectorAll("h6")[i].textContent = "¥" + ee.c + " (税込)";
               cn.querySelectorAll("p")[i].classList.add(ee.s == "sell" ? "text-success" : ee.s == "sold" ? "text-danger" : "_");
               cn.querySelectorAll("p")[i].textContent = ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中";
             });
