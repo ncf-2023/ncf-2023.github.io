@@ -110,6 +110,15 @@ document.addEventListener("DOMContentLoaded", (_) => {
         });
     });
 });
+document.addEventListener(
+  "touchmove",
+  function (event) {
+    if (event.scale !== 1) {
+      event.preventDefault();
+    }
+  },
+  false
+);
 window.onload = loadend;
 function loadend() {
   document.querySelector("#wrapper").classList.remove("hidden");
