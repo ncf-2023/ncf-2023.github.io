@@ -26,6 +26,7 @@ body {
   font-family: "Kosugi Maru", "Noto Color Emoji", sans-serif;
   font-size: 1.2rem;
   transform: translateZ(0.01px);
+  height: 100svh;
 }
 h1 {
   font-family: "Mochiy Pop One", sans-serif;
@@ -141,8 +142,7 @@ h1 {
       white-space: pre;
     }
     text-align: center;
-    filter: brightness(0) grayscale(0) invert(63%) sepia(10%) saturate(1285%)
-      hue-rotate(241deg) brightness(108%) contrast(81%);
+    filter: brightness(0) grayscale(0) invert(63%) sepia(10%) saturate(1285%) hue-rotate(241deg) brightness(108%) contrast(81%);
     font-family: "Mochiy Pop One", sans-serif;
     font-size: 17px;
   }
