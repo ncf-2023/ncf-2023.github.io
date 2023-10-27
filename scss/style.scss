@@ -329,3 +329,12 @@ h1 {
 .btn-primary {
   @include btncol(289, 23, 52, 255);
 }
+.sl-overlay,
+.sl-wrapper,
+.sl-image,
+.sl-caption {
+  transform: translateZ(0.02px);
+}
+.sl-caption {
+  z-index: 10001;
+}

@@ -133,3 +133,7 @@ div.live {
     display: none;
   }
 }
+iframe {
+  transform: translateZ(0.01px);
+  z-index: 31;
+}
