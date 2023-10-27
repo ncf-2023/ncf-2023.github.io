@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (_) => {
         .forEach((e) => {
           // console.log(e);
           let cn = document.querySelector("#posterTemplate").cloneNode(true);
-          cn.querySelector("img").src = "./media/" + e.f.substring(0, e.f.length - 4) + "-thumb" + e.f.substring(e.f.length - 4, e.f.length);
+          cn.querySelector("img").src = "./media/" + e.f.substring(0, e.f.length - 5) + "-thumb" + e.f.substring(e.f.length - 5, e.f.length);
           cn.querySelector("a").setAttribute("href", "./media/" + e.f);
           cn.querySelector("img").setAttribute("title", e.t + "  by " + (e.a || "匿名希望") + "  " + e.d);
           cn.querySelector("img").setAttribute("alt", e.t + " ─ " + (e.a || "匿名希望") + '<br class="pc sp">' + e.d);
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", (_) => {
         .forEach((e) => {
           // console.log(e);
           let cn = document.querySelector("#characterTemplate").cloneNode(true);
-          cn.querySelector("img").src = "./media/" + e.f.substring(0, e.f.length - 4) + "-thumb" + e.f.substring(e.f.length - 4, e.f.length);
+          cn.querySelector("img").src = "./media/" + e.f.substring(0, e.f.length - 5) + "-thumb" + e.f.substring(e.f.length - 5, e.f.length);
           cn.querySelector("a").setAttribute("href", "./media/" + e.f);
           cn.querySelector("img").setAttribute("title", e.t + "  by " + (e.a || "匿名希望") + "  " + e.d);
           cn.querySelector("img").setAttribute("alt", e.t + " ─ " + (e.a || "匿名希望") + '<br class="pc sp">' + e.d);
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", (_) => {
         .forEach((e) => {
           // console.log(e);
           let cn = document.querySelector("#illustTemplate").cloneNode(true);
-          cn.querySelector("img").src = "./media/" + e.f.substring(0, e.f.length - 4) + "-thumb" + e.f.substring(e.f.length - 4, e.f.length);
+          cn.querySelector("img").src = "./media/" + e.f.substring(0, e.f.length - 5) + "-thumb" + e.f.substring(e.f.length - 5, e.f.length);
           cn.querySelector("a").setAttribute("href", "./media/" + e.f);
           cn.querySelector("img").setAttribute("title", e.t + "  by " + (e.a || "匿名希望") + "  " + e.d);
           cn.querySelector("img").setAttribute("alt", e.t + " ─ " + (e.a || "匿名希望") + '<br class="pc sp">' + e.d);
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", (_) => {
           goodsDataArray.forEach((e) => {
             let cn = document.querySelector("#goodsTemplate").cloneNode(true);
             e.forEach((ee, i) => {
-              cn.querySelectorAll("img")[i].src = "./media/" + ee.p.substring(0, ee.p.length - 4) + "-thumb" + ee.p.substring(ee.p.length - 4, ee.p.length);
+              cn.querySelectorAll("img")[i].src = "./media/" + ee.p.substring(0, ee.p.length - 5) + "-thumb" + ee.p.substring(ee.p.length - 5, ee.p.length);
               cn.querySelectorAll("a")[i].setAttribute("href", "./media/" + ee.p);
               cn.querySelectorAll("img")[i].setAttribute("alt", ee.n + " ─ " + (ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中") + '<br class="pc sp">¥' + ee.c + " (税込)");
               cn.querySelectorAll("img")[i].setAttribute("title", ee.n + " 金券" + ee.c + "枚 ─ " + (ee.s == "sell" ? "販売中" : ee.s == "sold" ? "販売終了" : "準備中"));

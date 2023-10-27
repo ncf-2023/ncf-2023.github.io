@@ -9,37 +9,37 @@
   ],
   "p":[
     {
-      "p":"about_goodsBadge.png",
+      "p":"about_goodsBadge.webp",
       "n":"缶バッジ",
       "c":200,
       "s":"preparation"
     },
       {
-        "p":"about_goodsAmulet.png",
+        "p":"about_goodsAmulet.webp",
         "n":"お守りキーホルダー",
         "c":200,
         "s":"preparation"
       },
     {
-      "p":"about_goodsSticker.png",
+      "p":"about_goodsSticker.webp",
       "n":"ステッカーガチャ",
       "c":100,
       "s":"preparation"
     },
     {
-      "p":"about_goodsEbifurya.jpg",
+      "p":"about_goodsEbifurya.webp",
       "n":"えびふりゃー",
       "c":200,
       "s":"preparation"
     },
     {
-      "p":"about_goodsShachihoko.jpg",
+      "p":"about_goodsShachihoko.webp",
       "n":"きんしゃち",
       "c":200,
       "s":"preparation"
     },
     {
-      "p":"about_goodsFortune.jpg",
+      "p":"about_goodsFortune.webp",
       "n":"極端恋みくじ",
       "c":50,
       "s":"preparation"

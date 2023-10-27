@@ -44,27 +44,7 @@ h1 {
     margin: 0 auto;
     display: block;
     transform: translateZ(0.01px) translateY(-45px) rotateZ(2deg);
-    background-image: linear-gradient(
-      50deg,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170,
-      $contentbg,
-      $contentbg170
-    );
+    background-image: linear-gradient(50deg, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170, $contentbg, $contentbg170);
   }
   background-color: $txtboxOrange;
   padding: 2rem 1rem;
@@ -78,27 +58,7 @@ h1 {
     margin: 0 auto;
     display: block;
     transform: translateZ(0.01px) translateY(-45px) rotateZ(2deg);
-    background-image: linear-gradient(
-      50deg,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170,
-      $txtboxOrange137,
-      $txtboxOrange170
-    );
+    background-image: linear-gradient(50deg, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170, $txtboxOrange137, $txtboxOrange170);
   }
   background-color: $contentbg;
   padding: 2em 1em;
@@ -154,6 +114,7 @@ h1 {
     }
     &::before {
       opacity: 1;
+      transform: translateZ(0.01px);
     }
   }
 }
@@ -236,7 +197,7 @@ h1 {
     transform: translateZ(0.01px);
   }
   &Lines {
-    background-image: url(../../media/index_bgLines.png);
+    background-image: url(../../media/index_bgLines.webp);
     z-index: 21;
     background-size: 18%;
     background-repeat: repeat;
@@ -246,28 +207,28 @@ h1 {
   }
   &Shapes {
     &Circle {
-      background-image: url(../../media/index_bgShapeCircle.png);
+      background-image: url(../../media/index_bgShapeCircle.webp);
       background-size: 60%;
       background-repeat: repeat;
       z-index: 22;
       animation: shapesAnim ease-in-out alternate both infinite 10s 0ms;
     }
     &Line {
-      background-image: url(../../media/index_bgShapeLine.png);
+      background-image: url(../../media/index_bgShapeLine.webp);
       background-size: 60%;
       background-repeat: repeat;
       z-index: 23;
       animation: shapesAnim ease-in-out alternate-reverse both infinite 12s 0ms;
     }
     &Quadrilateral {
-      background-image: url(../../media/index_bgShapeQuadrilateral.png);
+      background-image: url(../../media/index_bgShapeQuadrilateral.webp);
       background-size: 60%;
       background-repeat: repeat;
       z-index: 24;
       animation: shapesAnim ease-in-out alternate-reverse both infinite 5s 0s;
     }
     &Triangle {
-      background-image: url(../../media/index_bgShapeTriangle.png);
+      background-image: url(../../media/index_bgShapeTriangle.webp);
       background-size: 60%;
       background-repeat: repeat;
       z-index: 25;
@@ -279,7 +240,7 @@ h1 {
   display: none;
 }
 #wrapper {
-  background-image: url(../../media/index_bgMainNew.png);
+  background-image: url(../../media/index_bgMainNew.webp);
   background-image: linear-gradient(180deg, #cc80cc, #817ed3);
   background-size: 100%;
   background-position: center;
