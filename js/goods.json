@@ -12,13 +12,13 @@
       "p":"about_goodsBadge.webp",
       "n":"缶バッジ",
       "c":200,
-      "s":"sell"
+      "s":"sold"
     },
       {
         "p":"about_goodsAmulet.webp",
         "n":"お守りキーホルダー",
         "c":200,
-        "s":"sell"
+        "s":"sold"
       },
     {
       "p":"about_goodsSticker.webp",
@@ -30,13 +30,13 @@
       "p":"about_goodsEbifurya.webp",
       "n":"えびふりゃー",
       "c":200,
-      "s":"sell"
+      "s":"sold"
     },
     {
       "p":"about_goodsShachihoko.webp",
       "n":"きんしゃち",
       "c":200,
-      "s":"sell"
+      "s":"sold"
     },
     {
       "p":"about_goodsFortune.webp",
